@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background-color: #86242a;
+   display: border-box;
+   font-family: "Lobster", "Helvetica Neue", sans-serif;
+   color: #e3e3e3;
+}
+
+.nav-bar {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 80px;
+   background-color: #4a2427;
+}
+
+.title {
+   font-size: 2.3rem;
+}
+
+.btn-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 0.5rem;
+}
+
+.btn {
+   border: 0;
+   text-align: center;
+   display: inline-block;
+   padding: 14px;
+   width: 150px;
+   margin: 7px;
+   color: #e3e3e3;
+   background-color: #36a2eb;
+   border-radius: 8px;
+   font-weight: 600;
+   text-decoration: none;
+   box-shadow: 0 9px rgb(99, 99, 99);
+}
+
+.btn:active {
+   background-color: #267bb5;
+   box-shadow: 0 5px rgb(102, 102, 102);
+   transform: translateY(4px);
+}
+
+.two {
+   background-color: #28af77;
+}
+
+.two:active {
+   background-color: #3e8e41;
+   box-shadow: 0 5px #666;
+   transform: translateY(4px);
+}
+
+.img-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   min-height: 70vh;
+}
+
+.image {
+   border-radius: 50%;
+   max-width: 100%;
+   max-height: 100%;
+}
+
+.img-hidden {
+   display: none;
+}
