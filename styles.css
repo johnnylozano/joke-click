@@ -54,14 +54,22 @@ body {
    transform: translateY(4px);
 }
 
-.two {
+.btn:hover {
+   background-color: #267bb5;
+}
+
+.btn-tell-joke {
    background-color: #28af77;
 }
 
-.two:active {
+.btn-tell-joke:active {
    background-color: #3e8e41;
    box-shadow: 0 5px #666;
    transform: translateY(4px);
+}
+
+.btn-tell-joke:hover {
+   background-color: #3e8e41;
 }
 
 .text-container {

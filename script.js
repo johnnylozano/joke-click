@@ -1,7 +1,7 @@
 let joke = [];
 const jokeText = document.querySelector(".joke-text");
-const tellJoke = document.getElementById("tellJoke");
-const getNewJoke = document.getElementById("newJoke");
+const tellJoke = document.getElementById("tell-joke");
+const getNewJoke = document.getElementById("new-joke");
 const imgSetup = document.querySelector(".img-setup");
 const imgPunchline = document.querySelector(".img-punchline");
 
@@ -12,6 +12,8 @@ const fetchJoke = async () => {
    joke.push(data.setup);
    joke.push(data.punchline);
    jokeText.textContent = joke[0];
+   imgSetup.classList.remove("img-hidden");
+   imgPunchline.classList.add("img-hidden");
 };
 
 fetchJoke();
@@ -25,6 +27,4 @@ tellJoke.addEventListener("click", () => {
 
 getNewJoke.addEventListener("click", () => {
    fetchJoke();
-   imgSetup.classList.remove("img-hidden");
-   imgPunchline.classList.add("img-hidden");
 });
