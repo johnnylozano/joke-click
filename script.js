@@ -7,13 +7,19 @@ const imgPunchline = document.querySelector(".img-punchline");
 
 const fetchJoke = async () => {
    joke = [];
-   const res = await fetch("https://official-joke-api.appspot.com/random_joke");
-   const data = await res.json();
-   joke.push(data.setup);
-   joke.push(data.punchline);
-   jokeText.textContent = joke[0];
-   imgSetup.classList.remove("img-hidden");
-   imgPunchline.classList.add("img-hidden");
+   try {
+      const res = await fetch(
+         "https://official-joke-api.appspot.com/random_joke"
+      );
+      const data = await res.json();
+      joke.push(data.setup);
+      joke.push(data.punchline);
+      jokeText.textContent = joke[0];
+      imgSetup.classList.remove("img-hidden");
+      imgPunchline.classList.add("img-hidden");
+   } catch (err) {
+      jokeText.textContent = err;
+   }
 };
 
 fetchJoke();
